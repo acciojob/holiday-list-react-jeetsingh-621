@@ -31,11 +31,22 @@ const App = () => {
     { name: 'Mussoorie', country: 'India' },
     { name: 'Mount Abu', country: 'India' },
     { name: 'Tirupati', country: 'India' },
-    ]
+    ];
+
+    const filteredindia = cityList.filter((item,index)=>{
+      return item.country =="India";
+    });
+    console.log(filteredindia);
+
     
   return (
     <div id="main">
-               {/* Do not remove the main div */}
+               <h1>Holiday Destinations in India</h1>
+               <ol>
+                {filteredindia.map((item,index)=>{
+                  return <li key={`location ${index+1}`}>{item.name}</li>
+                })}
+               </ol>
     </div>
   )
 }
