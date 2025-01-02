@@ -44,7 +44,7 @@ const App = () => {
                <h1>Holiday Destinations in India</h1>
                <ol>
                 {filteredindia.map((item,index)=>{
-                  return <li key={`location ${index+1}`}>{item.name}</li>
+                  return <li key={`location${index+1}`}>{item.name}</li>
                 })}
                </ol>
     </div>
